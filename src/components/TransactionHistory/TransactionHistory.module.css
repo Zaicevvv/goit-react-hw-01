@@ -1,0 +1,11 @@
+.transactions {
+  display: inline-block;
+  margin-left: 10px;
+}
+
+.transactions,
+.transactions th,
+.transactions td {
+  border: 1px solid black;
+  border-spacing: 0;
+}
