@@ -7,22 +7,12 @@ const Stats = ({ title, stats }) => (
     {title && <h2 className={css.title}>{title}</h2>}
 
     <ul className={css.list}>
-      <li className={css.item} key={stats[0].id}>
-        <span className={css.label}>{stats[0].label}</span>
-        <span className="percentage">{stats[0].percentage}%</span>
-      </li>
-      <li className={css.item} key={stats[1].id}>
-        <span className={css.label}>{stats[1].label}</span>
-        <span className="percentage">{stats[1].percentage}%</span>
-      </li>
-      <li className={css.item} key={stats[2].id}>
-        <span className={css.label}>{stats[2].label}</span>
-        <span className="percentage">{stats[2].percentage}%</span>
-      </li>
-      <li className={css.item} key={stats[3].id}>
-        <span className={css.label}>{stats[3].label}</span>
-        <span className="percentage">{stats[3].percentage}%</span>
-      </li>
+      {stats.map(item => (
+        <li className={css.item} key={item.id}>
+          <span className={css.label}>{item.label}</span>
+          <span className="percentage">{item.percentage}%</span>
+        </li>
+      ))}
     </ul>
   </section>
 );
